@@ -1,4 +1,5 @@
 import tkinter
+import os
 
 
 class Kletka(tkinter.Label):
@@ -114,6 +115,7 @@ class Framuga:
         self.label4.place(x=int(self.widtn_pole * 20)+60, y=40)
         self.label5.place(x=int(self.widtn_pole * 20) + 50, y=100)
         self.label6.place(x=int(self.widtn_pole * 20) + 60, y=130)
+        self.piypiy.protocol('WM_DELETE_WINDOW', lambda: os._exit(0))
         self.piypiy.mainloop()
         return 0
         # тоже вариант, но всё-таки движение не должно быть в классе
@@ -222,6 +224,7 @@ class FramugaTwoPolygons:
         self.label6.place(x=int(self.widtn_pole * 20) + 60, y=130)
         self.label7.place(x=0, y=self.height_pole * 22 - 20)
         self.label8.place(x=int(self.widtn_pole * 18), y=self.height_pole * 22 - 20)
+        self.piypiy.protocol('WM_DELETE_WINDOW', lambda: os._exit(0))
         self.piypiy.mainloop()
         return 0
         # тоже вариант, но всё-таки движение не должно быть в классе
